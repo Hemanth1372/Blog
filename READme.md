@@ -119,12 +119,6 @@ http://localhost:3000
 
 ---
 
-## 📸 Screenshots
-
-*(Add screenshots of your UI here for better impact)*
-
----
-
 ## 👨‍💻 Author
 
 **Hemanth Guntuku**
