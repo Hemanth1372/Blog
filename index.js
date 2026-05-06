@@ -5,11 +5,12 @@ import {fileURLToPath} from "url";
 import fs from "fs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 
 app.use(express.urlencoded({extended : true}));
 app.use(morgan("tiny"));
+app.use(express.static("public"));
 
 app.set("view engine", "ejs");
 
