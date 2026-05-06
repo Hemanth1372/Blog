@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Posts</title>
+        <link rel="stylesheet" href="/blogs.css">
+    </head>
+    <body>
+        <%- include("../utilities/header.ejs") %>
+        <div class="container">
+            <% for(let i = 0; i < posts.length; i++) { %>
+            <div class="post">
+                <h1><%= posts[i].title %></h1>
+                <p class="des"><%= posts[i].description %></p>
+            </div>
+            <% } %>
+        </div>
+        <%- include("../utilities/footer.ejs") %>
+    </body>
+</html>

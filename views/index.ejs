@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Own Blog</title>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+    <body>
+        <%- include("utilities/header.ejs") %>
+
+        <div class="container">
+            <div class="posts view-posts">
+                <img src="" alt="view-posts">
+                <h2> View Posts </h2>
+                <p class="total">Total posts : <%= totalposts %></p>
+                <form action="/features/blogs" method="GET">
+                    <input type="submit" value="Click Me">
+                </form>
+            </div>
+            <div class="posts create-post">
+                <img src="" alt="create-posts">
+                <h2> Create New Posts</h2>
+                <p class="des">Share your thoughts on anything.</p>
+                <form action="/features/create" method="GET">
+                    <input type="submit" value="Click Me">
+                </form>
+            </div>
+            <div class="posts update-post">
+                <img src="" alt="update-posts">
+                <h2> Update posts </h2>
+                <p class="des">Add something innovative.</p>
+                <form action="/features/update" method="GET">
+                    <input type="submit" value="Click Me">
+                </form>
+            </div>
+        </div>
+
+        <%- include("utilities/footer.ejs") %>
+    </body>
+</html>

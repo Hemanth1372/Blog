@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Posts</title>
+        <link rel="stylesheet" href="/blogs.css">
+    </head>
+    <body>
+        <%- include("../utilities/header.ejs") %>
+        <div class="container">
+            <% for(let i = 0; i < posts.length; i++) { %>
+            <div class="post">
+                <h1><%= posts[i].title %></h1>
+                <p class="des"><%= posts[i].description %></p>
+            </div>
+            <form action="/features/edit" method="GET">
+                <input type="hidden" name="id" value="<%= i %>">
+                <input type="submit" value="Edit">
+            </form>
+            <form action="/features/delete" method="DELETE">
+                <input type="submit" value="Delete" id="<%= i %>">
+            </form>
+            <% } %>
+        </div>
+        <%- include("../utilities/footer.ejs") %>
+    </body>
+</html>

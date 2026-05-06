@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Creating Post</title>
+    <link rel="stylesheet" href="/create.css">
+</head>
+<body>
+
+    <%- include("../utilities/header.ejs") %>
+
+    <div class="container">
+        <form action="/submit" method="POST">
+            <label>Title</label>
+            <input type="text" name="title" placeholder="Enter the title">
+
+            <label>Description</label>
+            <textarea name="description" placeholder="Share your thoughts!"></textarea>
+            <input type="submit" value="Post">
+        </form>
+    </div>
+
+    <%- include("../utilities/footer.ejs") %>
+
+</body>
+</html>
